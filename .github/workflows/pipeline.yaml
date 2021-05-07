@@ -1,0 +1,56 @@
+name: Web Content Deploy
+
+on:
+  workflow_dispatch: # manual trigger
+  push:
+    branches:
+    - main
+
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.CLA_WEBSITE_AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.CLA_WEBSITE_AWS_SECRET_ACCESS_KEY }}
+  AWS_REGION: eu-west-2
+
+jobs:
+  test:
+    name: Test app
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    - run: npm install
+    - run: npm test
+
+  deploy:
+    needs: test
+    name: Deploy
+    runs-on: ubuntu-latest
+    env:
+      env_name: production
+    environment:
+      name: production
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build
+      run: npm run build --if-present
+
+    - name: Deploy
+      uses: reggionick/s3-deploy@v3
+      with:
+        folder: public
+        bucket: ${{ secrets.S3_BUCKET }}
+        bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+        invalidation: /
+        delete-removed: true
+        no-cache: true
+        private: true
