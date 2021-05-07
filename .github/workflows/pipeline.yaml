@@ -47,7 +47,6 @@ jobs:
         aws-region: eu-west-2
         role-to-assume: ${{ secrets.CLA_WEBSITE_AWS_ROLE }}
         role-duration-seconds: 900
-        role-session-name: gh-site-publisher
 
     - name: Deploy
       run: |
