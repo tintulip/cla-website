@@ -1,0 +1,28 @@
+{
+  "name": "creative-licensing-agency",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Creative Licensing Agency",
+  "author": "Team Mozart",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "jest"
+  },
+  "dependencies": {
+    "gatsby": "^3.4.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "babel-jest": "^26.6.3",
+    "babel-preset-gatsby": "^1.4.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "jest-enzyme": "^7.1.2",
+    "react-test-renderer": "^17.0.2"
+  }
+}
