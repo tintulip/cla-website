@@ -52,4 +52,4 @@ jobs:
     - name: Deploy
       run: |
         aws s3 sync . s3://${{ secrets.S3_BUCKET }}
-      working_directory: public
+      working-directory: public
