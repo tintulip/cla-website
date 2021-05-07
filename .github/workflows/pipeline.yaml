@@ -46,7 +46,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.CLA_WEBSITE_AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-west-2
         role-to-assume: ${{ secrets.CLA_WEBSITE_AWS_ROLE }}
-        role-duration-seconds: 300
+        role-duration-seconds: 900
         role-session-name: gh-site-publisher
 
     - name: Deploy
