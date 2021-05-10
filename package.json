@@ -10,7 +10,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "jest"
+    "test": "jest",
+    "format": "prettier --write 'src/*/*.js'"
   },
   "dependencies": {
     "gatsby": "^3.4.1",
@@ -18,11 +19,13 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "@testing-library/react": "^11.2.6",
     "babel-jest": "^26.6.3",
     "babel-preset-gatsby": "^1.4.0",
+    "eslint": "^7.26.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
-    "jest-enzyme": "^7.1.2",
-    "react-test-renderer": "^17.0.2"
+    "jest-axe": "^4.1.0",
+    "prettier": "2.3.0"
   }
 }
