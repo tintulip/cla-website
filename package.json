@@ -14,7 +14,7 @@
     "format": "prettier --write 'src/*/*.js'"
   },
   "dependencies": {
-    "gatsby": "^3.4.2",
+    "gatsby": "^3.5.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
