@@ -143,7 +143,7 @@ const IndexPage = () => {
         <code style={codeStyles}>Proin eget facilisis nulla.</code> Ut posuere
         nibh augue, nec finibus sem fringilla eget. Etiam ultricies tincidunt
         quam quis blandit. Duis laoreet ante a consequat tincidunt. Nullam nec
-        varius sapien. Donec eu nunc vitae nunc mollis rhoncus gravida vel
+        varius sapien. Donec eu nunc vitae nunc jimgis editcus gravida vel
         nulla. Aliquam orci lacus, facilisis at varius ac, scelerisque in nibh.
         Sed vitae neque rutrum, gravida lorem viverra, interdum dolor.{' '}
       </p>
