@@ -22,7 +22,7 @@
     "@testing-library/react": "^11.2.7",
     "babel-jest": "^27.0.1",
     "babel-preset-gatsby": "^1.6.0",
-    "eslint": "^7.27.0",
+    "eslint": "^8.7.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.1",
     "jest-axe": "^4.1.0",
